@@ -1,0 +1,18 @@
+{
+  "name": "ui-library",
+  "version": "0.0.1",
+  "description": "A UI library built with Storybook, React, Typescript, and Rollup",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}
