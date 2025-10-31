@@ -6,21 +6,23 @@
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "",
   "license": "MIT",
   "babel": {
-    "sourceTupe": "unambiguous",
+    "sourceType": "unambiguous",
     "presets": [
       "@babel/preset-env",
       "@babel/preset-typescript",
       [
-        "@babel/preset-react"
-      ],
-      {
-        "runtime": "automatic"
-      }
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
     ]
   },
   "devDependencies": {
@@ -30,11 +32,15 @@
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-docs": "^10.0.1",
+    "@storybook/addon-onboarding": "^10.0.1",
+    "@storybook/react-vite": "^10.0.1",
     "@types/react": "^19.2.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^10.0.1",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3"
   },
