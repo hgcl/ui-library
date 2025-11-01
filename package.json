@@ -12,6 +12,7 @@
     "dist"
   ],
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "storybook": "storybook dev -p 6006",
