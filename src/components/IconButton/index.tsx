@@ -10,6 +10,8 @@ const IconButton: React.FC<IconButtonProps> = ({
   href,
   ...props
 }) => {
+  const PATH_ICON_SRPITE = "../assets/feather-icons-sprite.svg";
+
   if (href)
     return (
       <Link href={href} className={styles.Button} {...props}>
@@ -21,7 +23,7 @@ const IconButton: React.FC<IconButtonProps> = ({
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <use href={`../feather-icons-sprite.svg#${featherIcon}`} />
+            <use href={`${PATH_ICON_SRPITE}#${featherIcon}`} />
           </svg>{" "}
         </div>
         <span
@@ -45,7 +47,7 @@ const IconButton: React.FC<IconButtonProps> = ({
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <use href={`../feather-icons-sprite.svg#${featherIcon}`} />
+          <use href={`${PATH_ICON_SRPITE}#${featherIcon}`} />
         </svg>
       </div>
       <span
