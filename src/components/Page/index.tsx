@@ -1,6 +1,6 @@
 import React from "react";
 import { PageProps } from "./types";
-import styles from "./styles.module.css";
+import styles from "./Page.module.css";
 
 const Page: React.FC<PageProps> = ({ title, children }) => (
   <>
