@@ -3,8 +3,7 @@ import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
-import packageJson from "./package.json" assert { type: "json" };
-import plugin from "rollup-plugin-dts";
+import packageJson from "./package.json" with { type: "json" };
 
 export default [
   {
@@ -27,6 +26,10 @@ export default [
       typescript({
         tsconfig: "./tsconfig.json",
         exclude: ["**/*.test.tsc", "**/*.test.ts", "**/*.stories.ts"],
+      }),
+      postcss({
+        include: "src/assets/globals.css",
+        extract: "globals.css",
       }),
       postcss({
         modules: true,
