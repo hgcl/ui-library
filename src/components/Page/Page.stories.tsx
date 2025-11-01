@@ -8,24 +8,26 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {
-    title: { description: "The title of the Page", control: { type: "text" } },
-    children: {
-      description: "The children of the Page",
+    title: {
+      description: " The `<h1>` title of the Page.",
       control: { type: "text" },
+    },
+    children: {
+      description: "The children of the Page component",
+      control: { type: "text" },
+    },
+    isTitleHidden: {
+      description:
+        "If true, the `<h1>` title will be visually hidden (but still announced by screen readers).",
+      control: { type: "boolean" },
     },
   },
 };
 
-export const PageOne = {
+export const Default = {
   args: {
-    title: "This is the Page One title.",
-    children: "This is the Page One children.",
-  },
-};
-
-export const PageTwo = {
-  args: {
-    title: "This is the Page One title.",
-    children: "This is the Page One children.",
+    title: "This is the Page title.",
+    children: "This is the Page children.",
+    isTitleHidden: false,
   },
 };
