@@ -3,8 +3,8 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/hgcl"
   },
-  "version": "0.0.2",
-  "description": "A UI library built with Storybook, React, Typescript, and Rollup",
+  "version": "0.0.3",
+  "description": "A UI library built for NextJS — with Storybook, React, Typescript, and Rollup",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
