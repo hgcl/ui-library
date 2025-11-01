@@ -1,6 +1,6 @@
 # UI Library
 
-A UI library built with Storybook, React, Typescript, and Rollup
+A UI library built for NextJS — with Storybook, React, Typescript, and Rollup
 
 ## Commit conventions
 
