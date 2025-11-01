@@ -1,3 +1,36 @@
+/* 
+  Note: make sure comments follow storybook-design-tokens conventions
+  https://github.com/UX-and-I/storybook-design-token
+*/
+
+/*
+  DESIGN TOKENS
+*/
+
+:root {
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+  --bg-normal: white;
+  --fg-normal: hsl(212, 22%, 12%);
+  --bg-strong: hsl(212, 22%, 12%);
+  --fg-strong: white;
+  --bg-subtle: hsl(0deg, 0%, 86%);
+  --fg-subtle: hsl(0deg, 0%, 35%);
+  --bg-accent: hsl(208, 100%, 83%);
+  --bg-accent-hovered: hsl(208, 100%, 70%);
+  --bg-accent-pressed: hsl(205, 69%, 53%);
+  --fg-accent: hsl(212, 22%, 12%);
+  --bg-success: hsl(141, 100%, 93%);
+  --fg-success: hsl(141, 100%, 13%);
+  --bg-danger: pink;
+  --fg-danger: darkred;
+  /**
+  * @tokens-end
+  */
+}
+
 /* ACCESSIBILITY */
 /* Util to visually hide an element, but read by screen reader. Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 .hgcl-lib-visually-hidden {
