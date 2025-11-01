@@ -1,1 +1,3 @@
-export { default as Page } from "./components/Page";
+import "./globals.css";
+
+export * from "./components/Page";
