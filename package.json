@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/hgcl"
   },
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A UI library built for NextJS — with Storybook, React, Typescript, and Rollup",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -51,8 +51,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-storybook": "9.1.16",
     "globals": "^16.5.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^9.1.16",
@@ -61,11 +59,9 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2"
   },
-  "overrides": {
-    "react-dom": "^19.2.0",
-    "react": "^19.2.0"
-  },
   "peerDependencies": {
-    "next": ">=15"
+    "next": ">=15",
+    "react-dom": ">=19",
+    "react": ">=19"
   }
 }
