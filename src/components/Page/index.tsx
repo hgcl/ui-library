@@ -9,7 +9,7 @@ const Page: React.FC<PageProps> = ({
 }) => (
   <>
     <h1
-      className={`${isTitleHidden && "hgcl-lib-visually-hidden"} ${
+      className={`${isTitleHidden ? "hgcl-lib-visually-hidden" : ""} ${
         styles.Page_title
       }`}
     >
