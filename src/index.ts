@@ -1,5 +1,6 @@
-import "./globals.css";
+import "../public/globals.css";
 
 export { default as Page } from "./components/Page";
 export { default as Button } from "./components/Button";
 export { default as IconButton } from "./components/IconButton";
+export { default as Hypertext } from "./components/Hypertext";
