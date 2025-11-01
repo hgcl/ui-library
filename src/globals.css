@@ -29,6 +29,53 @@
   /**
   * @tokens-end
   */
+
+  /* SPACINGS */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --section-gap: 48px;
+  /* PADDINGS */
+  --padding-s: 0.5rem;
+  --padding-m: 1rem;
+  --padding-l: 1.5rem;
+  --padding-xl: 2rem;
+  /* WIDTHS */
+  --limited-width: 640px;
+  /* BORDERS */
+  --border-radius: 16px;
+  --border-radius-s: 4px;
+  --border: 2px solid;
+  /* OUTLINES */
+  --boxshadow-as-outline: 0px 0px 5px 5px rgb(94, 158, 214);
+  --outline: 5px auto rgb(94, 158, 214);
+  --outline-offset: 2px;
+  /* TYPOGRAPHY */
+  --fontsize-display: 4rem;
+  --fontsize-headline-l: 2rem;
+  --fontsize-headline-m: 1.5rem;
+  --fontsize-headline-s: 1.125rem;
+  --lineheight-headline: 1.2;
+  --fontsize-body-m: 1rem;
+  --fontsize-body-s: 0.875rem;
+  --lineheight-body: 1.4;
+  --fontsize-compact: 0.8rem;
+  --lineheight-compact: 1.2;
+  --fontweight-bold: 700;
+  --fontweight-regular: 400;
+  --fontweight-light: 300;
+  /* FONT STACK */
+  --fontstack-default: Inter, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+    Arial, Roboto, sans-serif;
+  --fontstack-code: "Courier New", Courier, monospace;
+  --fontvariation-headline: "wght" 700;
+  --fontvariation-body: "wght" 400;
+  --fontvariation-body-strong: "wght" 700;
+  /* ICONS */
+  --iconsize-m: 24px;
+  --iconsize-s: 16px;
 }
 
 /* ACCESSIBILITY */
