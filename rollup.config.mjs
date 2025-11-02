@@ -34,15 +34,21 @@ export default [
         tsconfig: "./tsconfig.json",
         exclude: ["**/*.test.tsc", "**/*.test.ts", "**/*.stories.ts"],
       }),
+      // Module CSS
       postcss({
-        include: "src/assets/globals.css",
-        extract: "globals.css",
-      }),
-      postcss({
+        include: "**/*.module.css",
         modules: true,
         extensions: [".css"],
         inject: true,
         extract: false,
+      }),
+      // Globals CSS
+      postcss({
+        include: ["src/assets/globals.css"],
+        modules: false,               
+        extensions: [".css"],
+        inject: false,                // don't inject global CSS into JS
+        extract: "globals.css",   // extract all global CSS into this file
       }),
     ],
   },
