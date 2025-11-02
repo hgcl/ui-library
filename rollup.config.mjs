@@ -4,6 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import packageJson from "./package.json" with { type: "json" };
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 export default [
   {
@@ -20,7 +21,13 @@ export default [
         sourcemap: true,
       },
     ],
+     external: [
+    "react",
+    "react-dom",
+    "next",
+  ],
     plugins: [
+      peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({
