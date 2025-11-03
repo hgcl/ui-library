@@ -26,33 +26,44 @@
   --fg-success: hsl(141, 100%, 13%);
   --bg-danger: pink;
   --fg-danger: darkred;
-  /**
-  * @tokens-end
-  */
 
-  /* SPACINGS */
+  /**
+  * @tokens Spacings
+  * @presenter Spacing
+  */
   --spacing-xs: 4px;
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 24px;
   --spacing-xl: 32px;
   --section-gap: 48px;
-  /* PADDINGS */
+
+  /**
+  * @tokens Paddings
+  * @presenter Spacing
+  */
   --padding-s: 0.5rem;
   --padding-m: 1rem;
   --padding-l: 1.5rem;
   --padding-xl: 2rem;
-  /* WIDTHS */
-  --limited-width: 640px;
-  /* BORDERS */
+
+  /**
+  * @tokens Border radius
+  * @presenter BorderRadius
+  */
   --border-radius: 16px;
   --border-radius-s: 4px;
+
+  /**
+  * @tokens Borders
+  * @presenter Border
+  */
   --border: 2px solid;
-  /* OUTLINES */
-  --boxshadow-as-outline: 0px 0px 5px 5px rgb(94, 158, 214);
-  --outline: 5px auto rgb(94, 158, 214);
-  --outline-offset: 2px;
-  /* TYPOGRAPHY */
+
+  /**
+  * @tokens Font sizes
+  * @presenter FontSize
+  */
   --fontsize-display: 4rem;
   --fontsize-headline-l: 2rem;
   --fontsize-headline-m: 1.5rem;
@@ -60,22 +71,54 @@
   --lineheight-headline: 1.2;
   --fontsize-body-m: 1rem;
   --fontsize-body-s: 0.875rem;
-  --lineheight-body: 1.4;
   --fontsize-compact: 0.8rem;
+
+  /**
+  * @tokens Line heights
+  * @presenter LineHeight
+  */
+  --lineheight-body: 1.4;
   --lineheight-compact: 1.2;
+
+  /**
+  * @tokens Font weights
+  * @presenter FontWeight
+  */
   --fontweight-bold: 700;
   --fontweight-regular: 400;
   --fontweight-light: 300;
-  /* FONT STACK */
+
+  /**
+  * @tokens Font families
+  * @presenter FontFamily
+  */
   --fontstack-default: Inter, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
     Arial, Roboto, sans-serif;
   --fontstack-code: "Courier New", Courier, monospace;
   --fontvariation-headline: "wght" 700;
   --fontvariation-body: "wght" 400;
   --fontvariation-body-strong: "wght" 700;
-  /* ICONS */
+
+  /**
+  * @tokens Icon sizes
+  * @presenter Spacing
+  */
   --iconsize-m: 24px;
   --iconsize-s: 16px;
+
+  /**
+  * @tokens Outlines shadow
+  * @presenter Shadow
+  */
+  --boxshadow-as-outline: 0px 0px 5px 5px rgb(94, 158, 214);
+  /**
+  * @tokens Outlines
+  */
+  --outline: 5px auto rgb(94, 158, 214);
+  --outline-offset: 2px;
+  /**
+  * @tokens-end
+  */
 }
 
 /* 
