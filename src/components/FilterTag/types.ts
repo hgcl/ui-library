@@ -1,5 +1,5 @@
 export type FilterTagProps = {
-  children: React.ReactSVGElement;
+  children?: React.ReactNode;
   label: string;
   id: string;
   isChecked: boolean;

@@ -8,7 +8,7 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {
-    message: {
+    children: {
       description: "The message displayed by the Banner.",
       control: { type: "text" },
     },
@@ -21,7 +21,7 @@ export default {
 
 export const Default = {
   args: {
-    message: "This website is still under construction",
+    children: "This website is still under construction",
     isDisabled: false,
   },
 };

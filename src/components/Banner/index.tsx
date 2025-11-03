@@ -3,7 +3,7 @@ import { BannerProps } from "./types";
 import styles from "./Banner.module.css";
 
 const Banner: React.FC<BannerProps> = ({
-  message,
+  children,
   isDisabled = false,
   ...props
 }) => {
@@ -13,7 +13,7 @@ const Banner: React.FC<BannerProps> = ({
 
   return (
     <section className={styles.Banner} {...props}>
-      {message}
+      {children}
     </section>
   );
 };

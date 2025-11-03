@@ -1,4 +1,4 @@
 export type BannerProps = {
-  message: string;
+  children: string;
   isDisabled?: boolean;
 };

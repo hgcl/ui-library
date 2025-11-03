@@ -1,6 +1,6 @@
 export type IconButtonProps = {
   label: string;
-  children: React.ReactSVGElement;
+  children: React.ReactNode;
   hideLabel?: boolean;
   href?: string;
 };
