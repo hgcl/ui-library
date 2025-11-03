@@ -78,9 +78,47 @@
   --iconsize-s: 16px;
 }
 
+/* 
+  BASE STYLES
+*/
+
+html {
+  font-size: 16px;
+  font-family: var(--fontstack-default);
+  font-variation-settings: var(--fontvariation-body);
+  font-stretch: normal;
+  color: var(--fg-normal);
+  background-color: var(--bg-normal);
+}
+
+body {
+  position: relative; /* so that skip to content button is correctly displayed */
+  line-height: var(--lineheight-body);
+}
+
+h1,
+h2,
+h3 {
+  font-variation-settings: var(--fontvariation-headline);
+  line-height: var(--lineheight-headline);
+}
+h1 {
+  font-size: var(--fontsize-headline-l);
+}
+h2 {
+  font-size: var(--fontsize-headline-m);
+}
+h3 {
+  font-size: var(--fontsize-headline-s);
+}
+
+/* 
+  UTILS
+*/
+
 /* ACCESSIBILITY */
 /* Util to visually hide an element, but read by screen reader. Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
-.hgcl-lib-visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
