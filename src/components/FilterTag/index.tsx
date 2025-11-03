@@ -13,11 +13,11 @@ const FilterTag: React.FC<FilterTagProps> = ({
   ...props
 }) => (
   <div
-    className={`${styles.Pill} ${isChecked ? styles.checked : ""}`}
+    className={`${styles.Filter} ${isChecked ? styles.checked : ""}`}
     {...props}
   >
     <input
-      className={styles.Pill_input}
+      className={styles.Filter_input}
       type="checkbox"
       id={id}
       value={id}
@@ -26,7 +26,7 @@ const FilterTag: React.FC<FilterTagProps> = ({
       onChange={handleFilterChange}
     />
     <label htmlFor={id}>{label}</label>
-    <span className={styles.Pill_iconWrapper} aria-hidden="true" hidden>
+    <span className={styles.Filter_iconWrapper} aria-hidden="true" hidden>
       {children ? children : <Check />}
     </span>
   </div>

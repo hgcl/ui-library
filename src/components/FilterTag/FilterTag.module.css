@@ -1,4 +1,4 @@
-.Pill {
+.Filter {
   font-size: var(--fontsize-body-s);
   position: relative;
   border: var(--border) var(--bg-subtle);
@@ -10,13 +10,13 @@
   align-items: center;
   gap: var(--padding-s);
 }
-.Pill,
-.Pill * {
+.Filter,
+.Filter * {
   cursor: pointer;
 }
 
 /* Hide default <input> box */
-.Pill_input {
+.Filter_input {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -25,7 +25,7 @@
   height: 100%;
 }
 
-.Pill_iconWrapper svg {
+.Filter_iconWrapper svg {
   height: var(--iconsize-s);
   width: var(--iconsize-s);
   /* center icon in circle */
@@ -38,32 +38,32 @@
 */
 
 /* If pill is checked */
-.Pill.checked {
+.Filter.checked {
   background-color: var(--bg-strong);
   border-color: var(--bg-strong);
 }
-.Pill.checked * {
+.Filter.checked * {
   color: var(--fg-strong);
 }
-.Pill.checked .Pill_iconWrapper {
+.Filter.checked .Filter_iconWrapper {
   display: inline-block;
 }
 
 /* Simulate default outline */
 /* TODO: backup if :focus-within is not supported */
-.Pill:focus-within {
+.Filter:focus-within {
   outline: var(--outline);
   outline-offset: var(--outline-offset);
 }
 
-.Pill:focus-within,
-.Pill:hover,
-.Pill:focus {
+.Filter:focus-within,
+.Filter:hover,
+.Filter:focus {
   border: var(--border) var(--fg-accent);
   background-color: var(--bg-accent-hovered);
 }
-.Pill:hover *,
-.Pill:focus *,
-.Pill:focus-within * {
+.Filter:hover *,
+.Filter:focus *,
+.Filter:focus-within * {
   color: var(--fg-accent);
 }
