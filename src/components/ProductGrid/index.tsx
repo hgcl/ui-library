@@ -15,29 +15,35 @@ const ProductGrid: React.FC<ProductGridProps> = ({
 }) => (
   <ul className={styles.Grid} {...props}>
     {/* First product */}
-    {products.slice(0, 1).map((el) => (
-      <ProductCard
-        image={el[imageProp]}
-        name={el[nameProp]}
-        url={el[urlProp]}
-        description={el[descriptionProp]}
-        price={el[priceProp]}
-        imagePriority="high"
-        imageBlur={el[imageBlurProp]}
-      />
-    ))}
+    {products
+      .slice(0, 1)
+      .map(({ id, image, name, url, description, price, imageBlur }) => (
+        <ProductCard
+          key={id}
+          image={image}
+          name={name}
+          url={url}
+          description={description}
+          price={price}
+          imagePriority="high"
+          imageBlur={imageBlur}
+        />
+      ))}
     {/* From 2nd product to last */}
-    {products.slice(1).map((el) => (
-      <ProductCard
-        image={el[imageProp]}
-        name={el[nameProp]}
-        url={el[urlProp]}
-        description={el[descriptionProp]}
-        price={el[priceProp]}
-        imagePriority="low"
-        imageBlur={el[imageBlurProp]}
-      />
-    ))}
+    {products
+      .slice(1)
+      .map(({ id, image, name, url, description, price, imageBlur }) => (
+        <ProductCard
+          key={id}
+          image={image}
+          name={name}
+          url={url}
+          description={description}
+          price={price}
+          imagePriority="low"
+          imageBlur={imageBlur}
+        />
+      ))}
   </ul>
 );
 
