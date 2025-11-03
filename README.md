@@ -2,6 +2,16 @@
 
 A UI library built for NextJS — with Storybook, React, Typescript, and Rollup
 
+## Publish the library
+
+Make sure all new components are exported in `src/index.ts`. Update the package version number in `package.json`.
+
+```
+npm i
+npm build
+npm publish
+```
+
 ## Commit conventions
 
 _Source: [Conventional commits](https://www.conventionalcommits.org/)_
