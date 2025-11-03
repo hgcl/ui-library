@@ -30,10 +30,6 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-        exclude: ["**/*.test.tsc", "**/*.test.ts", "**/*.stories.ts"],
-      }),
       // Module CSS
       postcss({
         include: "**/*.module.css",
@@ -50,9 +46,14 @@ export default [
         inject: false,                // don't inject global CSS into JS
         extract: "globals.css",   // extract all global CSS into this file
       }),
+        typescript({
+        tsconfig: "./tsconfig.json",
+        exclude: ["**/*.test.tsc", "**/*.test.ts", "**/*.stories.ts"],
+      }),
     ],
   },
   {
+    // Copy `types` dir from inside of `esm` dir to root `dist`
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
