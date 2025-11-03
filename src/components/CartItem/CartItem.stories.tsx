@@ -8,6 +8,22 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {
+    image: {
+      description: "The Cart Item image url.",
+    },
+    name: {
+      description: "The Cart Item name.",
+    },
+    url: {
+      description:
+        "The Cart Item url — the link opened when the name is clicked.",
+    },
+    description: {
+      description: "The Cart Item description.",
+    },
+    price: {
+      description: "The Cart Item price.",
+    },
     children: {
       description:
         'The children of the Cart Item component. By default: a "Remove from cart" button.',

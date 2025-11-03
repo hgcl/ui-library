@@ -9,7 +9,7 @@ export default {
   tags: ["autodocs"],
   argTypes: {
     children: {
-      description: "The children of Hypertext.",
+      description: "The children of Hypertext (text displayed).",
       control: { type: "text" },
     },
     href: {

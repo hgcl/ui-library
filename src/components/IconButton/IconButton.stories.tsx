@@ -12,11 +12,6 @@ export default {
       description: "The label of the Icon Button.",
       control: { type: "text" },
     },
-    iconName: {
-      description:
-        "The icon name from the feather icons collection (https://iconNames.com/).",
-      control: { type: "text" },
-    },
     hideLabel: {
       description:
         "If true, the label will be visually hidden (but still announced by screen readers).",
@@ -27,12 +22,23 @@ export default {
         "The URL of the Icon Button — in reality a link (`<a>`) element. If there is no `href`, the Icon Button is truly a `<button>` element.",
       control: { type: "text" },
     },
+    children: {
+      description:
+        "The children of Icon Button. By default: inline `<svg>` or SVG React component.",
+    },
   },
 };
 
 export const Default = {
   args: {
     label: "Label",
-    iconName: "moon",
+    hideLabel: false,
+  },
+};
+
+export const NoLabel = {
+  args: {
+    label: "Label",
+    hideLabel: true,
   },
 };

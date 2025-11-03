@@ -17,6 +17,13 @@ export default {
       control: { type: "boolean" },
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: "600px" }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const Default = {

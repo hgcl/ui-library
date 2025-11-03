@@ -7,7 +7,31 @@ export default {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    image: {
+      description: "The product image url.",
+    },
+    name: {
+      description: "The product name.",
+    },
+    url: {
+      description:
+        "The product url — the link opened when the name is clicked.",
+    },
+    description: {
+      description: "The product description.",
+    },
+    price: {
+      description: "The product price.",
+    },
+    imagePriority: {
+      description: "Do we need to load this image in priority?",
+    },
+    imageBlur: {
+      description:
+        "The product image (when blurred) url. This fastens page loading and lowers CLS.",
+    },
+  },
 };
 
 export const Default = {

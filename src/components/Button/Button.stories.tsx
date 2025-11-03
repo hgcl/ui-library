@@ -17,7 +17,7 @@ export default {
         "The URL of the Button — in reality a link (`<a>`) element. If there is no `href`, the Button is truly a `<button>` element.",
       control: { type: "text" },
     },
-    type: {
+    variant: {
       description:
         '3 button variants — there should be max. one "primary" button on a page.',
     },
@@ -26,21 +26,21 @@ export default {
 
 export const Primary = {
   args: {
-    type: "primary",
+    variant: "primary",
     children: "Click me",
   },
 };
 
 export const Secondary = {
   args: {
-    type: "secondary",
+    variant: "secondary",
     children: "Click me",
   },
 };
 
 export const Ternary = {
   args: {
-    type: "ternary",
+    variant: "ternary",
     children: "Click me",
   },
 };
