@@ -18,7 +18,7 @@ export default {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: React.FC) => (
       <div style={{ width: "600px" }}>
         <Story />
       </div>

@@ -24,7 +24,7 @@ export default {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: React.FC) => (
       <div style={{ width: "600px", position: "relative", top: "-30px" }}>
         <Story />
       </div>
