@@ -1,8 +1,8 @@
 export type FilterTagProps = {
-  children: React.ReactNode;
+  children: React.ReactSVGElement;
+  label: string;
   id: string;
-  value: string;
-  selectedCategories: Set<string>;
   isChecked: boolean;
   handleFilterChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  groupName?: string;
 };

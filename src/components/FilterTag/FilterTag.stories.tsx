@@ -8,34 +8,32 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {
-    //     children,
-    // id,
-    // value,
-    // selectedCategories,
-    // isChecked,
-    // handleFilterChange,
     children: {
-      description: "The children of the Filter Tag.",
+      description: "The children of the Filter Tag (`<svg>`).",
+    },
+    label: {
+      description: "The `label` of the Filter Tag.",
       control: { type: "text" },
     },
     id: {
       description: "The `id` of the Filter Tag.",
       control: { type: "text" },
     },
-    value: {
-      description: "The `value` of the Filter Tag.",
-      control: { type: "text" },
-    },
     isChecked: {
       description: "If true, the Filter Tag is displayed as selected.",
       control: { type: "boolean" },
+    },
+    groupName: {
+      description:
+        "Define a same group name for filter tags belonging to the same group.",
+      control: { type: "text" },
     },
   },
 };
 
 export const Selected = {
   args: {
-    children: "Filter name",
+    label: "Filter name",
     id: "xxx",
     value: "xxx",
     isChecked: true,
@@ -44,7 +42,7 @@ export const Selected = {
 
 export const Unselected = {
   args: {
-    children: "Filter name",
+    label: "Filter name",
     id: "xxx",
     value: "xxx",
     isChecked: false,

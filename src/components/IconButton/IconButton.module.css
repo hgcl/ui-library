@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
 }
-.Button_svgWrapper > svg {
+.Button_svgWrapper svg {
   height: var(--iconsize-m);
   width: var(--iconsize-m);
 }
@@ -46,8 +46,8 @@
 .Button:focus > .Button_svgWrapper {
   background-color: var(--bg-accent-hovered);
 }
-.Button:hover > .Button_svgWrapper > svg,
-.Button:focus > .Button_svgWrapper > svg {
+.Button:hover > .Button_svgWrapper svg,
+.Button:focus > .Button_svgWrapper svg {
   color: var(--fg-accent);
 }
 .Button:hover > .Button_label,

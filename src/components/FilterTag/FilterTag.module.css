@@ -25,7 +25,7 @@
   height: 100%;
 }
 
-.Pill_icon {
+.Pill_iconWrapper svg {
   height: var(--iconsize-s);
   width: var(--iconsize-s);
   /* center icon in circle */
