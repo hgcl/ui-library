@@ -1,0 +1,8 @@
+.Banner {
+  width: 100%;
+  background-color: var(--fg-normal);
+  color: var(--bg-normal);
+  font-weight: bold;
+  padding: var(--spacing-s);
+  text-align: center;
+}
