@@ -6,16 +6,16 @@ import styles from "./Button.module.css";
 const Button: React.FC<ButtonProps> = ({
   children,
   href,
-  type = "secondary",
+  variant = "secondary",
+  isDisabled = false,
   onClick,
-  disabled = false,
   ...props
 }) => {
   if (href)
     return (
       <Link
         href={href}
-        className={`${styles.Button} ${styles[type]}`}
+        className={`${styles.Button} ${styles[variant]}`}
         {...props}
       >
         {children}
@@ -25,9 +25,9 @@ const Button: React.FC<ButtonProps> = ({
   return (
     // Based on previous <Link> example
     <button
-      className={`${styles.Button} ${styles[type]}`}
+      className={`${styles.Button} ${styles[variant]}`}
       onClick={() => onClick && onClick()}
-      disabled={disabled}
+      disabled={isDisabled}
       {...props}
     >
       {children}

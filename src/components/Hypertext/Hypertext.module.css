@@ -2,3 +2,6 @@
   color: var(--fg-normal);
   font-variation-settings: var(--fontvariation-body-strong);
 }
+.Hypertext:visited {
+  color: var(--fg-normal);
+}

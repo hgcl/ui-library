@@ -1,7 +1,7 @@
 import Hypertext from ".";
 
 export default {
-  title: "My components/Hypertext",
+  title: "Components/Hypertext",
   component: Hypertext,
   parameters: {
     layout: "centered",

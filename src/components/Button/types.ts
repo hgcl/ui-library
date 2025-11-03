@@ -1,7 +1,7 @@
 export type ButtonProps = {
   children: React.ReactNode;
   href?: string;
-  type?: "primary" | "secondary" | "ternary";
+  variant?: "primary" | "secondary" | "ternary";
+  isDisabled?: boolean;
   onClick?: () => void;
-  disabled?: boolean;
 };

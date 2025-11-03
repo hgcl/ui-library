@@ -5,12 +5,12 @@ import styles from "./IconButton.module.css";
 
 const IconButton: React.FC<IconButtonProps> = ({
   label,
-  featherIcon = "moon",
+  iconName = "moon",
   hideLabel = false,
   href,
   ...props
 }) => {
-  const PATH_ICON_SRPITE = "../assets/feather-icons-sprite.svg";
+  const PATH_ICON_SPRITE = "../feather-icons-sprite.svg";
 
   if (href)
     return (
@@ -23,7 +23,7 @@ const IconButton: React.FC<IconButtonProps> = ({
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <use href={`${PATH_ICON_SRPITE}#${featherIcon}`} />
+            <use href={`${PATH_ICON_SPRITE}#${iconName}`} />
           </svg>{" "}
         </div>
         <span
@@ -47,12 +47,12 @@ const IconButton: React.FC<IconButtonProps> = ({
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <use href={`${PATH_ICON_SRPITE}#${featherIcon}`} />
+          <use href={`${PATH_ICON_SPRITE}#${iconName}`} />
         </svg>
       </div>
       <span
         className={`${styles.Button_label} ${
-          hideLabel ? "hgcl-lib-visually-hidden" : ""
+          hideLabel ? "visually-hidden" : ""
         }`}
       >
         {label}

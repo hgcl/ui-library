@@ -1,6 +1,6 @@
 export type IconButtonProps = {
   label: string;
-  featherIcon: string;
+  iconName: string;
   hideLabel?: boolean;
   href?: string;
 };

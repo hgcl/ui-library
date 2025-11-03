@@ -1,7 +1,7 @@
 import IconButton from ".";
 
 export default {
-  title: "My components/Icon Button",
+  title: "Components/Icon Button",
   component: IconButton,
   parameters: {
     layout: "centered",
@@ -12,9 +12,9 @@ export default {
       description: "The label of the Icon Button.",
       control: { type: "text" },
     },
-    featherIcon: {
+    iconName: {
       description:
-        "The icon name from the feather icons collection (https://feathericons.com/).",
+        "The icon name from the feather icons collection (https://iconNames.com/).",
       control: { type: "text" },
     },
     hideLabel: {
@@ -33,6 +33,6 @@ export default {
 export const Default = {
   args: {
     label: "Label",
-    featherIcon: "moon",
+    iconName: "moon",
   },
 };
