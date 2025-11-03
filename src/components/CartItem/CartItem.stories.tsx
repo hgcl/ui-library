@@ -7,7 +7,12 @@ export default {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    children: {
+      description:
+        'The children of the Cart Item component. By default: a "Remove from cart" button.',
+    },
+  },
 };
 
 export const Default = {

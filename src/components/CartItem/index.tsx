@@ -11,7 +11,7 @@ const CartItem: React.FC<CartItemProps> = ({
   url,
   description,
   price,
-  updateCartButton,
+  children,
 }) => (
   <li className={styles.Card}>
     <div className={styles.Card_image}>
@@ -25,8 +25,8 @@ const CartItem: React.FC<CartItemProps> = ({
           </Link>
         </h2>
         <p className={styles.Card_description}>{description}...</p>
-        {updateCartButton ? (
-          updateCartButton
+        {children ? (
+          children
         ) : (
           <Button variant="ternary">Remove from cart</Button>
         )}

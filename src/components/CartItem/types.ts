@@ -4,5 +4,5 @@ export type CartItemProps = {
   url: string;
   description: string;
   price: number;
-  updateCartButton?: React.ReactNode;
+  children?: React.ReactNode;
 };
