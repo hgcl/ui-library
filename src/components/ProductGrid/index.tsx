@@ -3,16 +3,7 @@ import { ProductGridProps } from "./types";
 import ProductCard from "../ProductCard";
 import styles from "./ProductGrid.module.css";
 
-const ProductGrid: React.FC<ProductGridProps> = ({
-  products,
-  imageProp,
-  nameProp,
-  urlProp,
-  descriptionProp,
-  priceProp,
-  imageBlurProp,
-  ...props
-}) => (
+const ProductGrid: React.FC<ProductGridProps> = ({ products, ...props }) => (
   <ul className={styles.Grid} {...props}>
     {/* First product */}
     {products
