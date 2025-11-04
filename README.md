@@ -1,6 +1,6 @@
 # UI Library
 
-A UI library built for NextJS — with Storybook, React, Typescript, and Rollup
+The UI library of Life Under Control. It is built for Next.js — with Storybook, React, Typescript, and Rollup. Package published on NPM as [@hgcle/ui-library](https://www.npmjs.com/package/@hgcle/ui-library).
 
 ## Publish the library
 
@@ -9,7 +9,7 @@ Make sure all new components are exported in `src/index.ts`. Update the package 
 ```
 npm i
 npm build
-npm publish
+npm publish --access public
 ```
 
 ## Commit conventions
