@@ -6,7 +6,7 @@ export default {
   parameters: {
     layout: "centered",
   },
-  tags: ["!dev", "autodocs"],
+  tags: ["autodocs"],
   argTypes: {},
   decorators: [
     (Story: React.FC) => (

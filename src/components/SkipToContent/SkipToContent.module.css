@@ -1,4 +1,4 @@
-#Skip {
+.SkipToContent {
   /* Reset <a> default styles */
   text-decoration: none;
   /* Custom styles */
@@ -11,7 +11,7 @@
   padding: var(--padding-m);
 }
 
-#Skip:focus {
+.SkipToContent:focus {
   /* Transition */
   top: 0;
   transition: top 0.2s ease-in-out;

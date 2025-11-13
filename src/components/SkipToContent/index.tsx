@@ -8,7 +8,7 @@ const SkipToContent: React.FC<SkipToContentProps> = ({
   showArrow = true,
   children,
 }) => (
-  <Link id={styles.Skip} href={href}>
+  <Link className={styles.SkipToContent} href={href}>
     {children ? children : `Skip to content`}
     {showArrow ? <span aria-hidden="true"> ↓</span> : ""}
   </Link>

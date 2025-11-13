@@ -4,7 +4,7 @@ import ProductCard from "../ProductCard";
 import styles from "./ProductGrid.module.css";
 
 const ProductGrid: React.FC<ProductGridProps> = ({ products, ...props }) => (
-  <ul className={styles.Grid} {...props}>
+  <ul className={styles.ProductGrid} {...props}>
     {/* First product */}
     {products
       .slice(0, 1)

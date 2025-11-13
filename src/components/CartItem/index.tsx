@@ -13,25 +13,25 @@ const CartItem: React.FC<CartItemProps> = ({
   price,
   children,
 }) => (
-  <li className={styles.Card}>
-    <div className={styles.Card_image}>
+  <li className={styles.CartItem}>
+    <div className={styles.CartItem__imageWrapper}>
       <Image src={image} alt="" width={150} height={150} />
     </div>
-    <div className={styles.Card_textWrapper}>
-      <div className={styles.Card_nameAndDescription}>
+    <div className={styles.CartItem__textWrapper}>
+      <div className={styles.CartItem__nameAndDescription}>
         <h2>
-          <Link className={styles.Card_link} href={url}>
+          <Link className={styles.CartItem__link} href={url}>
             {name}
           </Link>
         </h2>
-        <p className={styles.Card_description}>{description}...</p>
+        <p className={styles.CartItem__description}>{description}...</p>
         {children ? (
           children
         ) : (
           <Button variant="ternary">Remove from cart</Button>
         )}
       </div>
-      <p className={styles.Card_price}>€ {price.toFixed(2)}</p>
+      <p className={styles.CartItem__price}>€ {price.toFixed(2)}</p>
     </div>
   </li>
 );

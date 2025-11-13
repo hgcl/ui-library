@@ -1,4 +1,4 @@
-.Button {
+.IconButton {
   /* if <button>, reset styles */
   border: 0;
   background-color: transparent;
@@ -15,11 +15,11 @@
   /* hide default outline */
   outline: 0;
 }
-.Button > * {
+.IconButton > * {
   text-align: center;
   width: 100%;
 }
-.Button_svgWrapper {
+.IconButton__svgWrapper {
   /* make a round circle */
   height: calc(var(--iconsize-m)+var(--padding-s));
   width: calc(var(--iconsize-m)+var(--padding-s));
@@ -29,12 +29,12 @@
   display: flex;
   align-items: center;
 }
-.Button_svgWrapper svg {
+.IconButton__svgWrapper svg {
   height: var(--iconsize-m);
   width: var(--iconsize-m);
 }
 /* Label */
-.Button_label {
+.IconButton__label {
   height: 0; /* so that only the circles are taken into account for when aligning */
   color: var(--fg-subtle);
   font-size: var(--fontsize-body-s);
@@ -42,21 +42,21 @@
 
 /* INTERACTIONS */
 
-.Button:hover > .Button_svgWrapper,
-.Button:focus > .Button_svgWrapper {
+.IconButton:hover > .IconButton__svgWrapper,
+.IconButton:focus > .IconButton__svgWrapper {
   background-color: var(--bg-accent-hovered);
 }
-.Button:hover > .Button_svgWrapper svg,
-.Button:focus > .Button_svgWrapper svg {
+.IconButton:hover > .IconButton__svgWrapper svg,
+.IconButton:focus > .IconButton__svgWrapper svg {
   color: var(--fg-accent);
 }
-.Button:hover > .Button_label,
-.Button:focus > .Button_label {
+.IconButton:hover > .IconButton__label,
+.IconButton:focus > .IconButton__label {
   color: var(--fg-normal);
 }
 
 /* Simulate default outline around SVG only */
-.Button:focus > .Button_svgWrapper {
+.IconButton:focus > .IconButton__svgWrapper {
   outline: var(--outline);
   outline-offset: var(--outline-offset);
 }

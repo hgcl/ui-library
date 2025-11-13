@@ -13,12 +13,12 @@ const IconButton: React.FC<IconButtonProps> = ({
 }) => {
   if (href)
     return (
-      <Link href={href} className={styles.Button} {...props}>
-        <div className={styles.Button_svgWrapper} aria-hidden="true">
+      <Link href={href} className={styles.IconButton} {...props}>
+        <div className={styles.IconButton__svgWrapper} aria-hidden="true">
           {children ? children : <Moon />}
         </div>
         <span
-          className={`${styles.Button_label} ${
+          className={`${styles.IconButton__label} ${
             hideLabel ? "visually-hidden" : ""
           }`}
         >
@@ -29,12 +29,12 @@ const IconButton: React.FC<IconButtonProps> = ({
 
   return (
     // Based on previous <Link> example
-    <button className={styles.Button} {...props}>
-      <div className={styles.Button_svgWrapper} aria-hidden="true">
+    <button className={styles.IconButton} {...props}>
+      <div className={styles.IconButton__svgWrapper} aria-hidden="true">
         {children ? children : <Moon />}
       </div>
       <span
-        className={`${styles.Button_label} ${
+        className={`${styles.IconButton__label} ${
           hideLabel ? "visually-hidden" : ""
         }`}
       >

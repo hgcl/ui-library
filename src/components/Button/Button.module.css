@@ -10,6 +10,7 @@
   cursor: pointer;
   padding: var(--padding-m);
   font-family: var(--fontstack-default);
+  font-size: var(--fontsize-body-s);
   font-variation-settings: var(--fontvariation-body-strong);
 }
 
@@ -31,6 +32,8 @@
   background-color: transparent;
   padding: 0;
   /* Custom styles */
+  font-family: var(--fontstack-default);
+  font-size: var(--fontsize-body-s);
   font-variation-settings: var(--fontvariation-body-strong);
   color: var(--fg-normal);
   text-decoration: underline;

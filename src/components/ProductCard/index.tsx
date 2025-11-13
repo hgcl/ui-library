@@ -13,7 +13,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   imagePriority = "auto",
   imageBlur = "#",
 }) => (
-  <li className={styles.Card}>
+  <li className={styles.ProductCard}>
     <Image
       src={image}
       alt=""
@@ -27,16 +27,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
       blurDataURL={imageBlur}
     />
 
-    <div className={styles.Card_textWrapper}>
+    <div className={styles.ProductCard__textWrapper}>
       <div>
         <h2>
-          <Link className={styles.Card_link} href={url}>
+          <Link className={styles.ProductCard__link} href={url}>
             {name}
           </Link>
         </h2>
-        <p className={styles.Card_description}>{description}</p>
+        <p className={styles.ProductCard__description}>{description}</p>
       </div>
-      <p className={styles.Card_price}>€ {price.toFixed(2)}</p>
+      <p className={styles.ProductCard__price}>€ {price.toFixed(2)}</p>
     </div>
   </li>
 );

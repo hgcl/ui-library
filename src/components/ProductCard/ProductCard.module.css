@@ -1,4 +1,4 @@
-.Card {
+.ProductCard {
   /* Reset <li> styles */
   list-style-type: none;
   /* Custom styles */
@@ -10,7 +10,7 @@
   max-width: 400px;
 }
 
-.Card img {
+.ProductCard img {
   position: relative;
   aspect-ratio: 1/1;
   width: 100%;
@@ -19,7 +19,7 @@
   object-position: 0% 0%;
 }
 
-.Card_textWrapper {
+.ProductCard__textWrapper {
   padding: var(--padding-m);
   min-height: 184px;
   display: flex;
@@ -27,14 +27,14 @@
   justify-content: space-between;
 }
 
-.Card_textWrapper h2 {
+.ProductCard__textWrapper h2 {
   font-variation-settings: var(--fontvariation-headline);
   font-size: var(--fontsize-headline-s);
   line-height: var(--lineheight-headline);
   margin-bottom: var(--padding-s);
 }
 
-.Card_description {
+.ProductCard__description {
   color: var(--fg-subtle);
   font-size: var(--fontsize-body-s);
   /* Truncate text */
@@ -45,13 +45,13 @@
   overflow: hidden;
 }
 
-.Card_price {
+.ProductCard__price {
   font-variation-settings: var(--fontvariation-body-strong);
   justify-self: flex-end;
 }
 
-.Card_link {
-  /* Remove default outline, as a box-shadow is shown around `.Card` instead */
+.ProductCard__link {
+  /* Remove default outline, as a box-shadow is shown around `.ProductCard` instead */
   outline: 0;
   /* Remove link default styles, as link is the entire card */
   text-decoration: none;
@@ -60,7 +60,7 @@
 
 /* INTERACTIONS */
 
-.Card_link::after {
+.ProductCard__link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -69,8 +69,8 @@
   right: 0;
 }
 
-.Card:focus-within,
-.Card:hover,
-.Card:focus {
+.ProductCard:focus-within,
+.ProductCard:hover,
+.ProductCard:focus {
   border: var(--border) var(--fg-normal);
 }
