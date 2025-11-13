@@ -2,15 +2,15 @@
 
 The UI library of Life Under Control. It is built for Next.js — with Storybook, React, Typescript, and Rollup. Package published on NPM as [@hgcle/ui-library](https://www.npmjs.com/package/@hgcle/ui-library).
 
-## Publish the library
+### BEM methodology
 
-Make sure all new components are exported in `src/index.ts`. Update the package version number in `package.json`.
+This UI library is built based on the [BEM (Block, Element, Modifier) methodology](https://en.bem.info/methodology/quick-start/).
 
-```
-npm i
-npm build
-npm publish --access public
-```
+- **Block**: A functionally independent page component that can be reused. A block is created if a section of code might be reused, and it doesn't depend on other page components being implemented.
+- **Element**: A composite part of a block that can't be used separately from it. An element is created if a section of code can't be used separately without the parent entity (the block).
+- **Modifier**: An entity that defines the appearance (`sizeM`), state (`disabled`), or behavior (`leftTop`) of a block or element.
+
+In HTML, this BEM structure is represented by the `class` attribute. The structure of an element's full name is `BlockName__elementName`. The element name is separated from the block name with a double underscore (`__`). The modifier name is used in a separate `class`.
 
 ## Commit conventions
 
@@ -48,4 +48,14 @@ BREAKING CHANGE
 Before this fix foo wasn't enabled at all, behavior changes from <old> to <new>
 
 Closes D2IQ-12345
+```
+
+## Publish the library
+
+Make sure all new components are exported in `src/index.ts`. Update the package version number in `package.json`.
+
+```
+npm i
+npm build
+npm publish --access public
 ```
