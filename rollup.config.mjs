@@ -1,61 +1,51 @@
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
-import dts from "rollup-plugin-dts";
-import postcss from "rollup-plugin-postcss";
-import packageJson from "./package.json" with { type: "json" };
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import dts from "rollup-plugin-dts";
+import copy from "rollup-plugin-copy";
+import fs from "fs";
+import path from "path";
+
+// Get all component entry files dynamically
+const componentsDir = "src/components";
+const componentFiles = fs
+  .readdirSync(componentsDir)
+  .filter((name) => fs.statSync(path.join(componentsDir, name)).isDirectory())
+  .map((name) => path.join(componentsDir, name, "index.tsx"));
 
 export default [
   {
-    input: "src/index.ts",
-    output: [
-      {
-        file: packageJson.main,
-        format: "cjs",
-        sourcemap: true,
-      },
-      {
-        file: packageJson.module,
-        format: "esm",
-        sourcemap: true,
-      },
-    ],
-     external: [
-    "react",
-    "react-dom",
-    "next",
-  ],
+    input: componentFiles,
+    output: {
+      dir: "dist",
+      format: "esm",
+      sourcemap: true, // for debugging
+      preserveModules: true, // preserve folder structure from "src"
+      preserveModulesRoot: "src",
+    },
+    external: [/\.css$/, "react", "react-dom", "next"],
     plugins: [
+      // avoids bundling peer dependencies like React.
       peerDepsExternal(),
+      // lets Rollup handle node_modules imports.
       resolve(),
       commonjs(),
-      // Module CSS
-      postcss({
-        include: "**/*.module.css",
-        modules: true,
-        extensions: [".css"],
-        inject: false,
-        extract: false,
-      }),
-      // Globals CSS
-      postcss({
-        include: ["src/assets/globals.css"],
-        modules: false,               
-        extensions: [".css"],
-        inject: false,                // don't inject global CSS into JS
-        extract: "globals.css",   // extract all global CSS into this file
-      }),
-        typescript({
-        tsconfig: "./tsconfig.json",
-        exclude: ["**/*.test.tsc", "**/*.test.ts", "**/*.stories.ts"],
+      // handles typescript
+      typescript({ tsconfig: "./tsconfig.json" }),
+      copy({
+        targets: [
+          { src: "src/**/*.module.css", dest: "dist" },
+          { src: "src/assets/globals.css", dest: "dist" },
+        ],
+        flatten: false,
       }),
     ],
   },
+  // Type declarations
   {
-    // Copy `types` dir from inside of `esm` dir to root `dist`
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    input: "src/index.ts",
+    output: [{ file: "dist/index.d.ts", format: "es" }],
     plugins: [dts()],
     external: [/\.css$/],
   },
