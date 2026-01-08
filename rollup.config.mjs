@@ -35,7 +35,7 @@ export default [
         include: "**/*.module.css",
         modules: true,
         extensions: [".css"],
-        inject: true,
+        inject: false,
         extract: false,
       }),
       // Globals CSS
