@@ -1,6 +1,6 @@
 {
   "name": "@hgcle/ui-library",
-  "version": "0.0.25",
+  "version": "0.1.0",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -58,9 +58,9 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-feather": "^2.0.10",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^9.1.16",
     "storybook-design-token": "^4.1.0",
     "tslib": "^2.8.1",
