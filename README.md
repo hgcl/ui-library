@@ -56,6 +56,6 @@ Make sure all new components are exported in `src/index.ts`. Update the package 
 
 ```
 npm i
-npm build
+npm run build
 npm publish --access public
 ```
