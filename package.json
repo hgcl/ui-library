@@ -1,6 +1,6 @@
 {
   "name": "@hgcle/ui-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -17,7 +17,10 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./*": "./dist/components/*",
+    "./*": {
+      "import": "./dist/components/*/index.js",
+      "types": "./dist/components/*/index.d.ts"
+    },
     "./globals.css": "./dist/assets/globals.css"
   },
   "sideEffects": [
