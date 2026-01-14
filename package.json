@@ -1,6 +1,6 @@
 {
   "name": "@hgcle/ui-library",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -17,47 +17,8 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./assets/globals.css": "./dist/assets/globals.css",
-    "./Banner": {
-      "import": "./dist/components/Banner/index.js",
-      "types": "./dist/components/Banner/index.d.ts"
-    },
-    "./Button": {
-      "import": "./dist/components/Button/index.js",
-      "types": "./dist/components/Button/index.d.ts"
-    },
-    "./CartItem": {
-      "import": "./dist/components/CartItem/index.js",
-      "types": "./dist/components/CartItem/index.d.ts"
-    },
-    "./FilterTag": {
-      "import": "./dist/components/FilterTag/index.js",
-      "types": "./dist/components/FilterTag/index.d.ts"
-    },
-    "./Hypertext": {
-      "import": "./dist/components/Hypertext/index.js",
-      "types": "./dist/components/Hypertext/index.d.ts"
-    },
-    "./IconButton": {
-      "import": "./dist/components/IconButton/index.js",
-      "types": "./dist/components/IconButton/index.d.ts"
-    },
-    "./Page": {
-      "import": "./dist/components/Page/index.js",
-      "types": "./dist/components/Page/index.d.ts"
-    },
-    "./ProductCard": {
-      "import": "./dist/components/ProductCard/index.js",
-      "types": "./dist/components/ProductCard/index.d.ts"
-    },
-    "./ProductGrid": {
-      "import": "./dist/components/ProductGrid/index.js",
-      "types": "./dist/components/ProductGrid/index.d.ts"
-    },
-    "./SkipToContent": {
-      "import": "./dist/components/SkipToContent/index.js",
-      "types": "./dist/components/SkipToContent/index.d.ts"
-    }
+    "./*": "./dist/components/*",
+    "./globals.css": "./dist/assets/globals.css"
   },
   "sideEffects": [
     "**/*.css"
