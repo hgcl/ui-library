@@ -1,5 +1,3 @@
-import "./assets/globals.css";
-
 export { default as Banner } from "./components/Banner";
 export { default as Button } from "./components/Button";
 export { default as CartItem } from "./components/CartItem";

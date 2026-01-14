@@ -1,21 +1,70 @@
 {
   "name": "@hgcle/ui-library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "description": "A UI library built for NextJS — with Storybook, React, Typescript, and Rollup",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "description": "A UI library built for Next.js — with Storybook, React, Typescript, and Rollup",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./assets/globals.css": "./dist/assets/globals.css",
+    "./Banner": {
+      "import": "./dist/components/Banner/index.js",
+      "types": "./dist/components/Banner/index.d.ts"
+    },
+    "./Button": {
+      "import": "./dist/components/Button/index.js",
+      "types": "./dist/components/Button/index.d.ts"
+    },
+    "./CartItem": {
+      "import": "./dist/components/CartItem/index.js",
+      "types": "./dist/components/CartItem/index.d.ts"
+    },
+    "./FilterTag": {
+      "import": "./dist/components/FilterTag/index.js",
+      "types": "./dist/components/FilterTag/index.d.ts"
+    },
+    "./Hypertext": {
+      "import": "./dist/components/Hypertext/index.js",
+      "types": "./dist/components/Hypertext/index.d.ts"
+    },
+    "./IconButton": {
+      "import": "./dist/components/IconButton/index.js",
+      "types": "./dist/components/IconButton/index.d.ts"
+    },
+    "./Page": {
+      "import": "./dist/components/Page/index.js",
+      "types": "./dist/components/Page/index.d.ts"
+    },
+    "./ProductCard": {
+      "import": "./dist/components/ProductCard/index.js",
+      "types": "./dist/components/ProductCard/index.d.ts"
+    },
+    "./ProductGrid": {
+      "import": "./dist/components/ProductGrid/index.js",
+      "types": "./dist/components/ProductGrid/index.d.ts"
+    },
+    "./SkipToContent": {
+      "import": "./dist/components/SkipToContent/index.js",
+      "types": "./dist/components/SkipToContent/index.d.ts"
+    }
+  },
+  "sideEffects": [
+    "**/*.css"
   ],
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
-    "postbuild": "node postbuild.js",
     "dev": "rollup -c -w",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -43,8 +92,6 @@
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
     "@eslint/js": "^9.39.0",
-    "@rollup/plugin-commonjs": "^29.0.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^9.1.16",
     "@storybook/addon-docs": "^9.1.16",
@@ -59,7 +106,6 @@
     "react-dom": "^19.2.0",
     "react-feather": "^2.0.10",
     "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^9.1.16",
     "storybook-design-token": "^4.1.0",

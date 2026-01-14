@@ -1,8 +1,6 @@
-import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
-import commonjs from "@rollup/plugin-commonjs";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import dts from "rollup-plugin-dts";
+// import ignore from "rollup-plugin-ignore";
 import copy from "rollup-plugin-copy";
 import fs from "fs";
 import path from "path";
@@ -13,6 +11,7 @@ const componentFiles = fs
   .readdirSync(componentsDir)
   .filter((name) => fs.statSync(path.join(componentsDir, name)).isDirectory())
   .map((name) => path.join(componentsDir, name, "index.tsx"));
+componentFiles.push("src/index.ts");
 
 export default [
   {
@@ -24,29 +23,36 @@ export default [
       preserveModules: true, // preserve folder structure from "src"
       preserveModulesRoot: "src",
     },
-    external: [/\.css$/, "react", "react-dom", "next"],
+    external: (id) =>
+      id.endsWith(".module.css") ||
+      id === "react" ||
+      id === "react-dom" ||
+      id === "next",
     plugins: [
       // avoids bundling peer dependencies like React.
       peerDepsExternal(),
-      // lets Rollup handle node_modules imports.
-      resolve(),
-      commonjs(),
       // handles typescript
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+      }),
       copy({
         targets: [
-          { src: "src/**/*.module.css", dest: "dist" },
-          { src: "src/assets/globals.css", dest: "dist" },
+          {
+            src: "src/components/**/**/*.module.css",
+            dest: "dist/components",
+            rename: (name, ext, fullPath) => {
+              // preserve component folder structure
+              const rel = path.relative("src/components", fullPath);
+              return rel;
+            },
+          },
+          {
+            src: "src/assets/globals.css",
+            dest: "dist/assets",
+          },
         ],
-        flatten: false,
+        hook: "writeBundle",
       }),
     ],
-  },
-  // Type declarations
-  {
-    input: "src/index.ts",
-    output: [{ file: "dist/index.d.ts", format: "es" }],
-    plugins: [dts()],
-    external: [/\.css$/],
   },
 ];
