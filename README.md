@@ -2,6 +2,30 @@
 
 The UI library of Life Under Control. It is built for Next.js — with Storybook, React, Typescript, and Rollup. Package published on NPM as [@hgcle/ui-library](https://www.npmjs.com/package/@hgcle/ui-library).
 
+### Use in your Next.js project
+
+#### Requirements
+
+Make sure your project has the following dependencies to use this UI library.
+
+- [Next.js](https://nextjs.org/docs/app/getting-started/installation) (version >=15) and React (version >=19)
+- [React Feather](https://github.com/feathericons/react-feather) (version >=2)
+
+#### Importing styles and components
+
+In your Next.js layout file, start by importing the global styles. They include needed global variables (colors, spacings, etc.) and base styles.
+
+```
+import "@hgcle/ui-library/globals.css";
+```
+
+You can also import components from the library into your project like this:
+
+```
+import Button from "@hgcle/ui-library/Button";
+import Page from "@hgcle/ui-library/Page";
+```
+
 ### BEM methodology
 
 This UI library is built based on the [BEM (Block, Element, Modifier) methodology](https://en.bem.info/methodology/quick-start/).
